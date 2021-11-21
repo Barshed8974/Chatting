@@ -25,7 +25,9 @@ class MainActivity : AppCompatActivity() {
         mAuth= FirebaseAuth.getInstance()
 
         button.setOnClickListener(View.OnClickListener {
-            PerformLogin()
+            if(etName.text.toString().length>2&&etNumber.text.toString().length>4) {
+                PerformLogin()
+            }
         })
         button2.setOnClickListener(View.OnClickListener {
             startActivity(Intent(this,register::class.java))

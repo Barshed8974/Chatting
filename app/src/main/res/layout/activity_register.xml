@@ -15,7 +15,7 @@
         android:layout_height="38dp"
         android:layout_marginTop="88dp"
         android:gravity="center"
-        android:text="Welcome To Farmer Solution"
+        android:text="Welcome To ChitChat"
         android:textColor="@color/LimeGreen"
         android:textSize="20dp"
         android:textStyle="bold"
@@ -40,19 +40,23 @@
         app:layout_constraintVertical_bias="0.901">
 
         <TextView
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:padding="5dp"
             android:layout_width="75dp"
             android:layout_height="36dp"
             android:layout_marginLeft="5dp"
-            android:drawableLeft="@drawable/email"
             android:text="Name"
             android:textColor="@color/black" />
 
         <EditText
             android:id="@+id/etEmail"
-            android:layout_width="189dp"
+            android:layout_width="220dp"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:layout_margin="5dp"
-            android:hint="Enter your name"
+            android:gravity="center"
+            android:hint="Enter your Avatar"
             android:textColorHint="@color/black"
             android:textSize="12dp"
             tools:ignore="TouchTargetSizeCheck" />
@@ -74,16 +78,19 @@
 
         <TextView
             android:layout_width="74dp"
+            android:padding="5dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"
-            android:drawableLeft="@drawable/password"
+            android:layout_gravity="center"
             android:text="Password"
             android:textColor="@color/black" />
 
         <EditText
+            android:gravity="center"
             android:id="@+id/etPassword"
-            android:layout_width="189dp"
+            android:layout_width="226dp"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:layout_margin="5dp"
             android:hint="Enter your password"
             android:textColorHint="@color/black"
@@ -97,13 +104,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/shape"
-        android:text="Login"
+        android:text="Confirm"
+        android:padding="7dp"
         android:textColor="@color/LimeGreen"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.77"
+        app:layout_constraintHorizontal_bias="0.554"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.581" />
+        app:layout_constraintVertical_bias="0.613" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -22,7 +22,7 @@ class ChatActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_chat)
 
-        val name=intent.getStringExtra("name")
+        val name=intent.getStringExtra("user")
         val receiverUid=intent.getStringExtra("uid")
 
         val senderUid=FirebaseAuth.getInstance().currentUser?.uid.toString()

@@ -5,28 +5,35 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ChatActivity">
+
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/chatRecycler"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/chatRecycler"
-        android:layout_above="@+id/linear"
-        />
+        android:layout_above="@+id/linear" />
     <LinearLayout
+        android:layout_margin="10dp"
         android:id="@+id/linear"
         android:background="@drawable/shape"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
+        android:padding="3dp"
         >
+
         <EditText
+            android:layout_marginLeft="10dp"
             android:id="@+id/etChat"
-            android:layout_width="350dp"
-            android:layout_height="50dp"
+            android:layout_width="333dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
             android:hint="type your msg"
-            />
+            android:padding="7dp" />
         <ImageView
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:id="@+id/ivSend"
             android:src="@drawable/send"
             />

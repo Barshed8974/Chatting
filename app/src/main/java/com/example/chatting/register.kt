@@ -24,7 +24,6 @@ class register : AppCompatActivity() {
 
         button2.setOnClickListener(View.OnClickListener {
             PerformAuth()
-            startActivity(Intent(this,MainActivity::class.java))
         })
     }
     private fun PerformAuth() { if ( etPassword.text.length < 8
