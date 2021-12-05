@@ -25,7 +25,7 @@ class MainActivity : AppCompatActivity() {
         mAuth= FirebaseAuth.getInstance()
 
         button.setOnClickListener(View.OnClickListener {
-            if(etName.text.toString().length>2&&etNumber.text.toString().length>4) {
+            if(etName.text.toString().length>0&&etNumber.text.toString().length>3) {
                 PerformLogin()
             }
         })
@@ -34,9 +34,9 @@ class MainActivity : AppCompatActivity() {
         })
     }
     private fun PerformLogin() {
-        val email: String = etName.text.toString()
+        val email: String = etName.text.toString()+"@abc.com"
         val pass: String = etNumber.text.toString()
-        if ( pass.length < 8
+        if ( pass.length < 3
         ) etPassword.setError("Enter Proper Password Format")
         else {
             mAuth.signInWithEmailAndPassword(email, pass).addOnCompleteListener { task ->

@@ -1,5 +1,6 @@
 package com.example.chatting
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -29,6 +30,12 @@ class ChatActivity : AppCompatActivity() {
 
         senderRoom= receiverUid+senderUid
         receiverRoom=senderUid+receiverUid
+
+        val intent= Intent(this,Home::class.java)
+        intent.putExtra("s",senderRoom.toString())
+        intent.putExtra("r",receiverRoom.toString())
+        Log.d("check66",receiverRoom.toString())
+
         msglist= ArrayList()
         messageAdapter= MessageAdapter(this,msglist)
         chatRecycler.adapter=messageAdapter

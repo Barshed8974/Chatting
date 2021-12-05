@@ -1,8 +1,10 @@
 package com.example.chatting
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.auth.FirebaseAuth
@@ -48,7 +50,7 @@ class Home : AppCompatActivity() {
                     Log.d("TAG",shot.value.toString()+" "+mUser.currentUser?.uid)
                     Log.d("TAG", (mUser.currentUser?.email.toString() == shot.key.toString()).toString())
                     if(mUser.currentUser?.uid.toString() != shot.key.toString()) {
-                        userList.add(Users(shot.value.toString(), "", shot.key.toString()))
+                        userList.add(Users(shot.value.toString(), "", shot.key.toString().substringAfter('@')))
                         Log.d("TAG","in for")
                     }
                 }
@@ -62,6 +64,13 @@ class Home : AppCompatActivity() {
             }
 
         })
+        logout.setOnClickListener(View.OnClickListener {
+            FirebaseDatabase.getInstance().reference.child("Users").child(FirebaseAuth.getInstance().currentUser?.uid.toString()).removeValue()
+            FirebaseAuth.getInstance().currentUser?.delete()
+            Log.d("check66",FirebaseAuth.getInstance().currentUser?.uid.toString())
+            finish()
+        })
         Log.d("TAG","${userList.size}iooihj")
+
     }
 }

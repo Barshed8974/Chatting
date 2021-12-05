@@ -15,7 +15,6 @@ import kotlinx.android.synthetic.main.activity_register.*
 
 class register : AppCompatActivity() {
     lateinit var mAuth: FirebaseAuth
-    lateinit var user:FirebaseUser
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_register)
@@ -28,9 +27,9 @@ class register : AppCompatActivity() {
     }
     private fun PerformAuth() { if ( etPassword.text.length < 8
         ) etPassword.setError("Enter Proper Password Format") else {
-            mAuth.createUserWithEmailAndPassword(etEmail.text.toString(), etPassword.text.toString()).addOnCompleteListener { task ->
+            mAuth.createUserWithEmailAndPassword(etEmail.text.toString()+"@abc.com", etPassword.text.toString()).addOnCompleteListener { task ->
                 if (task.isSuccessful) {
-                    Toast.makeText(this@register, "Regidter SuccesFull", Toast.LENGTH_LONG).show()
+                    Toast.makeText(this@register, "Register SuccessFull", Toast.LENGTH_LONG).show()
                     addUsersToDB(etEmail.text.toString(),mAuth.currentUser?.uid)
                     login()
                 } else {

@@ -11,31 +11,33 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_above="@+id/linear" />
+
     <LinearLayout
-        android:layout_margin="10dp"
         android:id="@+id/linear"
-        android:background="@drawable/shape"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="398dp"
+        android:layout_height="75dp"
         android:layout_alignParentBottom="true"
-        android:padding="3dp"
-        >
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/shape"
+        android:padding="3dp">
 
         <EditText
-            android:layout_marginLeft="10dp"
             android:id="@+id/etChat"
-            android:layout_width="333dp"
-            android:layout_height="wrap_content"
+            android:layout_width="348dp"
+            android:layout_height="51dp"
             android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
             android:gravity="center"
             android:hint="type your msg"
             android:padding="7dp" />
+
         <ImageView
-            android:layout_gravity="center"
+            android:id="@+id/ivSend"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:id="@+id/ivSend"
-            android:src="@drawable/send"
-            />
+            android:layout_gravity="center"
+            android:src="@drawable/send" />
     </LinearLayout>
 </RelativeLayout>
