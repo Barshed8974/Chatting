@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_height="wrap_content"
     android:background="@color/white"
     tools:context=".MainActivity">
 
@@ -11,34 +12,24 @@
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="323dp"
+        android:layout_width="match_parent"
         android:layout_height="38dp"
         android:layout_marginTop="88dp"
         android:gravity="center"
         android:text="Welcome To ChitChat"
-        android:textColor="@color/LimeGreen"
+        android:textColor="#43A047"
         android:textSize="20dp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.352"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.235" />
+        android:textStyle="bold" />
 
 
     <LinearLayout
         android:gravity="center"
         android:id="@+id/linearLayout"
-        android:layout_width="336dp"
-        android:layout_height="57dp"
+        android:layout_width="match_parent"
+        android:layout_margin="10dp"
+        android:layout_height="60dp"
         android:background="@drawable/shape"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.573"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.901">
+        >
 
         <TextView
             android:layout_gravity="center"
@@ -54,7 +45,7 @@
             android:layout_gravity="center"
             android:gravity="center"
             android:id="@+id/etName"
-            android:layout_width="217dp"
+            android:layout_width="match_parent"
             android:layout_height="47dp"
             android:layout_margin="5dp"
             android:hint="Enter your Avtar"
@@ -66,16 +57,11 @@
 
     <LinearLayout
         android:id="@+id/linearLayout2"
-        android:layout_width="332dp"
+        android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:layout_marginStart="52dp"
-        android:layout_marginTop="280dp"
-        android:layout_marginEnd="75dp"
+        android:layout_margin="10dp"
         android:background="@drawable/shape"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.187"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        >
 
         <TextView
             android:layout_gravity="center"
@@ -91,7 +77,7 @@
             android:layout_gravity="center"
             android:gravity="center"
             android:id="@+id/etNumber"
-            android:layout_width="238dp"
+            android:layout_width="match_parent"
             android:layout_height="48dp"
             android:layout_margin="5dp"
             android:hint="Enter your password"
@@ -99,33 +85,37 @@
             android:textSize="12dp"
             tools:ignore="TouchTargetSizeCheck" />
     </LinearLayout>
-
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/shape"
-        android:text="Login"
-        android:textColor="@color/LimeGreen"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.309"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.691" />
+        android:orientation="horizontal"
+        android:weightSum="2"
+        >
+        <Button
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape"
+            android:text="Login"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:textColor="@color/LimeGreen"
+            />
 
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/shape"
-        android:text="Signup"
-        android:textColor="@color/LimeGreen"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.798"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.691" />
+        <Button
+            android:layout_weight="1"
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:text="Signup"
+            />
+    </LinearLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
